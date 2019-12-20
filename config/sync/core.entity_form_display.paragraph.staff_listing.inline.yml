@@ -22,7 +22,8 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
   field_group:
     group_details:
       children:
@@ -37,6 +38,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: Details
+      region: content
 _core:
   default_config_hash: o39bl4P3Nl_iX1ikc8PB09gLhl2GWKK6rZtT6RsJj40
 id: paragraph.staff_listing.inline

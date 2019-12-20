@@ -16,7 +16,8 @@ dependencies:
 third_party_settings:
   field_layout:
     id: layout_onecol
-    settings: {  }
+    settings:
+      label: ''
 _core:
   default_config_hash: rXcnwsJX1Odrtm8qqz6X-yRtmUAdsdcZDLckQMj-c0E
 id: node.gallery.default
@@ -31,6 +32,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -89,6 +91,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:

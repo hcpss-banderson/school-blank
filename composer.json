@@ -51,7 +51,7 @@
         "drupal/core": "^8.7.0",
         "drupal/date_all_day": "^1.0@beta",
         "drupal/devel": "^2.1",
-        "drupal/entity_browser": "2.x-dev",
+        "drupal/entity_browser": "2.x-dev#cfd28605a3f6c0535b4c985680762586264f95c5",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/field_group": "^3.0@RC",
         "drupal/field_token_value": "^1.0",
