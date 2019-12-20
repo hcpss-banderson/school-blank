@@ -1,0 +1,21 @@
+uuid: ca2aeaac-58de-4c56-b920-0bf4af5a67dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.entity_edit_lock_locked
+    - paragraphs.paragraphs_type.staff_listing
+id: paragraph.staff_listing.entity_edit_lock_locked
+field_name: entity_edit_lock_locked
+entity_type: paragraph
+bundle: staff_listing
+label: 'Edit locked'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

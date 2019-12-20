@@ -1,0 +1,15 @@
+uuid: 6d0f9441-a661-483a-8f7b-ec30bb1f4d73
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      basic_elements: '0'
+id: resource_section
+label: 'Resource Section'
+icon_uuid: null
+description: 'A section of up to 3 resource lists.'
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+uuid: 73d9ffc5-22f9-4f3b-91e6-cd724d554071
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_website
+    - paragraphs.paragraphs_type.staff_listing
+  module:
+    - link
+_core:
+  default_config_hash: O6KItfjpSto-a4fzNegwJWmkMGTfE-yyvO5z0G-YZnw
+id: paragraph.staff_listing.field_website
+field_name: field_website
+entity_type: paragraph
+bundle: staff_listing
+label: Website
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

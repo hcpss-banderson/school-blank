@@ -1,0 +1,28 @@
+uuid: 4a909d1c-3917-424a-a2fe-beb12af4e4ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resource_lists
+    - kind_wildcat.content_chunk_type.resource_list
+    - paragraphs.paragraphs_type.resource_section
+id: paragraph.resource_section.field_resource_lists
+field_name: field_resource_lists
+entity_type: paragraph
+bundle: resource_section
+label: 'Resource Lists'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:content_chunk'
+  handler_settings:
+    target_bundles:
+      resource_list: resource_list
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+# Default value.
+field.value.kind_wildcat_rich_link:
+  type: mapping
+  label: Default value
+  mapping:
+    label:
+      type: text
+      label: Label
+    uri:
+      type: uri
+      label: URI
+    description:
+      type: text
+      label: Description
+
+# Default value.
+field.value.kind_wildcat_rich_link:
+  type: mapping
+  label: Default value
+  mapping:
+    label:
+      type: string
+      label: Label
+    uri:
+      type: uri
+      label: URI
+    description:
+      type: text
+      label: Description

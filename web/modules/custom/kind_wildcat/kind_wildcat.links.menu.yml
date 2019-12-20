@@ -1,0 +1,7 @@
+# Content chunk type menu items definition
+entity.content_chunk_type.collection:
+  title: 'Content chunk type'
+  route_name: entity.content_chunk_type.collection
+  description: 'List Content chunk type (bundles)'
+  parent: system.admin_structure
+  weight: 99

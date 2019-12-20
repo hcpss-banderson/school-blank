@@ -1,0 +1,20 @@
+uuid: a6195edb-34ba-4b5b-ad2f-232e0a0dc0fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_edit_lock
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      basic_elements: '0'
+  entity_edit_lock:
+    lockable: 1
+_core:
+  default_config_hash: yGiYaKPzGiGtypxUHhhzixfDaC4aMu9xRt60hlC4oQM
+id: content_highlight
+label: 'Content Highlight'
+icon_uuid: null
+description: 'A grid of news stories, events, tweets, and photo galleries.'
+behavior_plugins: {  }

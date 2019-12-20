@@ -1,0 +1,50 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+function equity_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $config = \Drupal::config('hcpss_schoolsite_config.settings');
+    $acronym = $config->get('acronym');
+    $variables['school_acronym'] = $acronym;
+  }
+}
+
+function equity_preprocess_page_title(&$variables) {
+  //die('bing');
+}
+
+function equity_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  //dpm('omg');  
+}
+
+
+function equity_preprocess_html(&$variables) {
+  //\Drupal::messenger()->addMessage('brendan');
+}
+
+/**
+ * Implementation of hook_preprocess_field().
+ * 
+ * Determine a key image for multi image field "field_images".
+ */
+function equity_preprocess_field(&$variables) {
+  if ($variables['field_name'] == 'field_images') {
+    $variables['key_image'] = $variables['items'][0];
+  }
+}
+
+/**
+ * Implementation of hook_theme_suggestions_HOOK_alter().
+ * 
+ * Add the view mode to field suggestions.
+ */
+function equity_theme_suggestions_field_alter(array &$suggestions, array $variables) {  
+  $suggestions[] = 'field__' . implode('__', [
+    $variables['element']['#entity_type'],
+    $variables['element']['#field_name'],
+    $variables['element']['#bundle'],
+    $variables['element']['#view_mode'],
+  ]);
+}

@@ -1,0 +1,5 @@
+services:
+  kind_wildcat.commands:
+    class: \Drupal\kind_wildcat\Commands\ImportCommands
+    tags:
+      - { name: drush.command }

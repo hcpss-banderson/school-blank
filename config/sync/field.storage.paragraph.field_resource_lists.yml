@@ -1,0 +1,20 @@
+uuid: b6327abc-2c97-4fad-ae17-9f3f16d4411f
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+    - paragraphs
+id: paragraph.field_resource_lists
+field_name: field_resource_lists
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: content_chunk
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

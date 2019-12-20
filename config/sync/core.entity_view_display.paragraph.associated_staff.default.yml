@@ -1,0 +1,24 @@
+uuid: 779c4b56-1173-4097-9021-c455248045ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.associated_staff.field_role
+    - paragraphs.paragraphs_type.associated_staff
+  module:
+    - options
+_core:
+  default_config_hash: 4P_u8ZxSQhhCE1pRCNJT6r9tsg6R41O3XuBa91VK7A0
+id: paragraph.associated_staff.default
+targetEntityType: paragraph
+bundle: associated_staff
+mode: default
+content:
+  field_role:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

@@ -1,0 +1,38 @@
+uuid: ad946d40-464e-4061-9ea3-657bf53ea791
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_level
+    - field.field.paragraph.header.field_text
+    - paragraphs.paragraphs_type.header
+  module:
+    - field_layout
+    - layout_builder
+third_party_settings:
+  field_layout:
+    id: layout_twocol_section
+    settings:
+      column_widths: 25-75
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_level:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: first
+  field_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: second
+hidden:
+  created: true
+  status: true

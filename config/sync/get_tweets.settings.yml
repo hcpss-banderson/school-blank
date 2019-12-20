@@ -1,0 +1,12 @@
+import: true
+queries:
+  -
+    query: 'from:hcpss_ahs'
+    endpoint: search/tweets
+    parameter: q
+count: 10
+expire: 7776000
+consumer_key: egM3iQmPaEyO3MBg5IKvzYZmr
+consumer_secret: E77tIr5J0qruKieUf42vmZDBCn6HbDs6aakaoN1rPQIsYRupEm
+oauth_token: 76360723-G0wxjLb35snc2GSyP4tcpG1UR0Gi6qKZp6IB8mzBm
+oauth_token_secret: ifycjwbv41WyM7vmfF6Nw6KJn0vUd8xvdUVFl1fbx6SwF

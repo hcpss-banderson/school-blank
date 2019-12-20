@@ -1,0 +1,58 @@
+uuid: 1e2f231f-494f-4061-93c8-d30eab97443b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.highlight
+    - field.field.paragraph.content_highlight.entity_edit_lock_locked
+    - field.field.paragraph.content_highlight.field_content
+    - field.field.paragraph.content_highlight.field_title
+    - paragraphs.paragraphs_type.content_highlight
+  module:
+    - entity_browser
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: m3lx1d26FskCjsH8DaOm-8WPmvRSHh5jtUO0CkpD9lY
+id: paragraph.content_highlight.default
+targetEntityType: paragraph
+bundle: content_highlight
+mode: default
+content:
+  entity_edit_lock_locked:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_content:
+    weight: 1
+    settings:
+      entity_browser: highlight
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: highlight
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

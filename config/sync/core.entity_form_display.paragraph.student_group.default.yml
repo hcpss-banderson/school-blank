@@ -1,0 +1,66 @@
+uuid: 23db68b4-add7-4b35-b7d1-74544898a3d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.student_group.field_associated_staff
+    - field.field.paragraph.student_group.field_description
+    - field.field.paragraph.student_group.field_name
+    - field.field.paragraph.student_group.field_website
+    - paragraphs.paragraphs_type.student_group
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - paragraphs
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: 23txB2bg9Q5vF3-IyZHY2u_Z3HZykjOFUB_ShAieB1g
+id: paragraph.student_group.default
+targetEntityType: paragraph
+bundle: student_group
+mode: default
+content:
+  field_associated_staff:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_website:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

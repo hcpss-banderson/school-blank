@@ -1,0 +1,20 @@
+uuid: a4b850e5-75a4-4b59-a7f9-1781cf4abc8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_edit_lock
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      basic_elements: '0'
+  entity_edit_lock:
+    lockable: 1
+_core:
+  default_config_hash: TrrY-8kZgD0FhGrqbYpB9y-EToRnyCNuWsdPEvc-bZE
+id: staff_listing
+label: 'Staff Listing'
+icon_uuid: null
+description: 'Organize your staff by departments, teams and groups. For example, Administration, Building Service, Math, Grade 1, etc.'
+behavior_plugins: {  }

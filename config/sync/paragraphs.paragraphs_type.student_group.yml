@@ -1,0 +1,18 @@
+uuid: b4e9da2f-3b99-4f18-acdd-b7a549a239bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      heres_another_para_cat: heres_another_para_cat
+      this_is_a_p_cat: '0'
+_core:
+  default_config_hash: RT4ba0uND60gOfUFcPXnqkIwymG1MMa0ROeZ0IzoCGM
+id: student_group
+label: 'Student Group'
+icon_uuid: 8cfc91f8-db20-4291-9abb-a9b89d9d7312
+description: 'Clubs, Athletic teams and Graduating Classes.'
+behavior_plugins: {  }

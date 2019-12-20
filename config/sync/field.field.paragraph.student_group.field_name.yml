@@ -1,0 +1,21 @@
+uuid: 86be31a5-d13c-468a-90e0-21e413071246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.student_group
+_core:
+  default_config_hash: aeNK38J0yXCRxklO2DNdkk9eE7WgUJVZboIcuNqARMg
+id: paragraph.student_group.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: student_group
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

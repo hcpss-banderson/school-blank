@@ -1,0 +1,6 @@
+status: 1
+pattern: '[node:field_tweet_author:title]: [node:created:short]'
+escape: false
+dependencies:
+  config:
+    - node.type.tweet

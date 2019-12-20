@@ -1,0 +1,5 @@
+.paragraph--type--content-highlight.paragraph--view-mode--preview .field--name-field-content > .field__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}

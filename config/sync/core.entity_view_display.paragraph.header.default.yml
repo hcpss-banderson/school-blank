@@ -1,0 +1,31 @@
+uuid: dd89a572-b7e1-4301-9295-f174a6bf8a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_level
+    - field.field.paragraph.header.field_text
+    - paragraphs.paragraphs_type.header
+  module:
+    - options
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_level:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

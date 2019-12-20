@@ -1,0 +1,133 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }, {
+            "type": "package",
+            "package": {
+                "name": "hcpss/entity_edit_lock",
+                "version": "dev-master",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/HCPSS/entity_edit_lock.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }, {
+            "type": "package",
+            "package": {
+                "name": "hcpss/get_tweets",
+                "version": "dev-master",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/hcpss-banderson/get_tweets.git",
+                    "type": "git",
+                    "reference": "8.x-1.x"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "abraham/twitteroauth": "^1.0",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/auto_entitylabel": "^3.0@beta",
+        "drupal/bynder": "^2.5",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.7.0",
+        "drupal/date_all_day": "^1.0@beta",
+        "drupal/devel": "^2.1",
+        "drupal/entity_browser": "2.x-dev",
+        "drupal/entity_usage": "^2.0@beta",
+        "drupal/field_group": "^3.0@RC",
+        "drupal/field_token_value": "^1.0",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/media_entity_twitter": "^2.1",
+        "drupal/migrate_plus": "^4.2",
+        "drupal/migrate_tools": "^4.4",
+        "drupal/paragraphs": "^1.9",
+        "drupal/paragraphs_ee": "^1.4",
+        "drupal/pathauto": "^1.5",
+        "drupal/redirect": "^1.4",
+        "drupal/rules": "^3.0@alpha",
+        "drupal/token": "^1.5",
+        "drupal/wordpress_migrate": "^3.0@alpha",
+        "drush/drush": "^9.0.0",
+        "hcpss/entity_edit_lock": "dev-master",
+        "hcpss/get_tweets": "dev-master",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "^8.7.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        },
+        "patches": {
+            "drupal/entity_browser": {
+                "Issue 2973457": "https://www.drupal.org/files/issues/2019-10-03/entity-browser-add-table-widget--includes-2851580-52--2973457-157.patch"
+            }
+        }
+    }
+}

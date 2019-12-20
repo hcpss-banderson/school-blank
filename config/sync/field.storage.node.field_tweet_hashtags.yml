@@ -1,0 +1,23 @@
+uuid: 79287150-6da7-4eed-9378-b2ade54587f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: ZM_5a48_6TIaqnzRVWbeuaIJ9C2GnF1Mmw_gkN3rHIg
+id: node.field_tweet_hashtags
+field_name: field_tweet_hashtags
+entity_type: node
+type: string
+settings:
+  max_length: 140
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

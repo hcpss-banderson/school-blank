@@ -1,0 +1,98 @@
+uuid: 4e65bb18-d5c0-48c9-8913-e83a7474d8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.inline
+    - entity_browser.browser.staff_member
+    - field.field.paragraph.staff_listing.entity_edit_lock_locked
+    - field.field.paragraph.staff_listing.field_members
+    - field.field.paragraph.staff_listing.field_name
+    - field.field.paragraph.staff_listing.field_photo
+    - field.field.paragraph.staff_listing.field_website
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.staff_listing
+  module:
+    - entity_browser
+    - field_group
+    - field_layout
+    - image
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  field_group:
+    group_details:
+      children:
+        - field_photo
+        - field_website
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Details
+_core:
+  default_config_hash: o39bl4P3Nl_iX1ikc8PB09gLhl2GWKK6rZtT6RsJj40
+id: paragraph.staff_listing.inline
+targetEntityType: paragraph
+bundle: staff_listing
+mode: inline
+content:
+  entity_edit_lock_locked:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_members:
+    weight: 2
+    settings:
+      entity_browser: staff_member
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      table_settings:
+        label_column: true
+        status_column: false
+        bundle_column: false
+      field_widget_replace: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_table
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_photo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_website:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

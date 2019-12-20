@@ -1,0 +1,28 @@
+uuid: fe41fb1d-29f4-4a48-b2b5-572d1d66e42c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_chunk.field_resources
+    - kind_wildcat.content_chunk_type.resource
+    - kind_wildcat.content_chunk_type.resource_list
+id: content_chunk.resource_list.field_resources
+field_name: field_resources
+entity_type: content_chunk
+bundle: resource_list
+label: Resources
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:content_chunk'
+  handler_settings:
+    target_bundles:
+      resource: resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

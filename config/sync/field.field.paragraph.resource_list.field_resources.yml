@@ -1,0 +1,21 @@
+uuid: 831738ab-647a-4543-9cef-97521a204465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resources
+    - paragraphs.paragraphs_type.resource_list
+  module:
+    - kind_wildcat
+id: paragraph.resource_list.field_resources
+field_name: field_resources
+entity_type: paragraph
+bundle: resource_list
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: kind_wildcat_rich_link

@@ -1,0 +1,21 @@
+uuid: 856347fd-0d03-4c88-b09d-7d92b4135eaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_edit_lock
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  entity_edit_lock:
+    lockable: 1
+name: 'Complex Page'
+type: complex_page
+description: 'Use a <em>Complex Page</em> to create a page made of smaller pieces of structured data.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,118 @@
+<?php
+
+
+
+/**
+ * Implementation of kind_wildcat_inline_entity_form_entity_form_alter().
+ */
+function kind_wildcat_inline_entity_form_entity_form_alter(&$entity_form, &$form_state) {
+  if (
+    $entity_form['#entity_type'] == 'content_chunk' &&
+    $entity_form['#form_mode'] == 'abbreviated' &&
+    $entity_form['#bundle'] = 'staff_member'
+  ) {
+    unset($entity_form['revision_log_message']);
+    unset($entity_form['status']);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function kind_wildcat_theme() {
+  $theme = [];
+
+  $theme['content_chunk'] = [
+    'render element' => 'elements',
+    'file' => 'content_chunk.page.inc',
+    'template' => 'content_chunk',
+  ];
+
+  $theme['content_chunk_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'content_chunk.page.inc',
+  ];
+
+  $theme['highlight'] = [
+    'variables' => [
+      'content' => NULL
+    ],
+    'render element' => 'children',
+  ];
+
+  $types = _kind_wildcat_get_paragraph_types();
+
+  foreach ($types as $type) {
+    $theme['paragraph__kind_wildcat__' . $type] = [
+      'base hook' => 'paragraph',
+    ];
+  }
+
+  $theme['content_chunk__resource__embedded'] = [
+    'template' => 'content-chunk--resource--embedded',
+    'base hook' => 'content_chunk',
+  ];
+
+  return $theme;
+}
+
+/**
+ * Implementation of hook_preprocess_HOOK().
+ */
+function kind_wildcat_preprocess_paragraph(&$variables) {
+  if ($variables['view_mode'] == 'preview') {
+    if ($variables['paragraph']->bundle() == 'content_highlight') {
+      $variables['#attached']['library'][] = 'kind_wildcat/highlight.preview';
+    }
+
+    if ($variables['paragraph']->bundle() == 'resource_section') {
+      $variables['#attached']['library'][] = 'kind_wildcat/resource_section.preview';
+    }
+  }
+}
+
+function kind_wildcat_preprocess_container(&$variables) {
+  if (!empty($variables['attributes']['id']) && strpos($variables['attributes']['id'], 'edit-field-page-parts-0-subform-field-content-current--') === 0) {
+    $variables['#attached']['library'][] = 'kind_wildcat/highlight.edit';
+  }
+}
+
+/**
+ * Implements HOOK_theme_suggestions_HOOK_alter
+ */
+function kind_wildcat_theme_suggestions_paragraph_alter(&$suggestions, $variables){
+    $entity              = $variables['elements']['#paragraph'];
+    $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+    $type                = $entity->getType();
+
+    $suggestions[] = 'paragraph__kind_wildcat__' . $type;
+    $suggestions[] = 'paragraph__kind_wildcat__' . $type . '__' . $sanitized_view_mode;
+}
+
+/**
+ * Get an array of paragraph types that we want to alter templates for.
+ *
+ * @return string[]
+ */
+function _kind_wildcat_get_paragraph_types() {
+  return [
+    'header',
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function kind_wildcat_theme_suggestions_content_chunk(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#content_chunk'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'content_chunk__' . $sanitized_view_mode;
+  $suggestions[] = 'content_chunk__' . $entity->bundle();
+  $suggestions[] = 'content_chunk__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'content_chunk__' . $entity->id();
+  $suggestions[] = 'content_chunk__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

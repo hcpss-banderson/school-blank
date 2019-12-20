@@ -1,0 +1,6 @@
+hcpss_schoolsite_config.settings_form:
+  title: 'HCPSS Schoolsite Configuration'
+  route_name: hcpss_schoolsite_config.settings_form
+  description: 'Configure the HCPSS school site.'
+  parent: system.admin_config_system
+  weight: 99

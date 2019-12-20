@@ -1,0 +1,19 @@
+uuid: 1b8b315e-54f6-430a-8e1d-770828a2ef0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_chunk.field_job_title
+    - kind_wildcat.content_chunk_type.staff_member
+id: content_chunk.staff_member.field_job_title
+field_name: field_job_title
+entity_type: content_chunk
+bundle: staff_member
+label: 'Job Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

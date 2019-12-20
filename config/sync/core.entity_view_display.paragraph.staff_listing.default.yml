@@ -1,0 +1,59 @@
+uuid: b40659a6-0a0f-479f-a9f2-8a841bec1fc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.staff_listing.field_members
+    - field.field.paragraph.staff_listing.field_name
+    - field.field.paragraph.staff_listing.field_photo
+    - field.field.paragraph.staff_listing.field_website
+    - paragraphs.paragraphs_type.staff_listing
+  module:
+    - image
+    - link
+_core:
+  default_config_hash: 9oTnIGG_RQ3StiTVMUS_nziLyjUFPhJmm9OJ_uFekWw
+id: paragraph.staff_listing.default
+targetEntityType: paragraph
+bundle: staff_listing
+mode: default
+content:
+  field_members:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_photo:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_website:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  entity_edit_lock_locked: true

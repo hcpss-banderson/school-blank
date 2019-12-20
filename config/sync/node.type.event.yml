@@ -1,0 +1,19 @@
+uuid: efb08296-448b-4c05-9522-fff1f456f214
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: GYzUdnPbVrqtixQbcmuOcykeFABM2-DnsFrleMjRE9c
+name: Event
+type: event
+description: 'Use event to add an event to the school calendar.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

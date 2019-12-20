@@ -1,0 +1,31 @@
+uuid: fa363216-e2eb-488f-bb4c-2e36606f75cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resource_section.field_resource_lists
+    - field.field.paragraph.resource_section.field_title
+    - paragraphs.paragraphs_type.resource_section
+id: paragraph.resource_section.default
+targetEntityType: paragraph
+bundle: resource_section
+mode: default
+content:
+  field_resource_lists:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

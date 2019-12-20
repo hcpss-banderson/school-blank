@@ -1,0 +1,76 @@
+uuid: 9b6dc2fb-7729-458e-b269-211ac96c1e0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.content_chunk.staff_member.field_biography
+    - field.field.content_chunk.staff_member.field_email
+    - field.field.content_chunk.staff_member.field_job_title
+    - field.field.content_chunk.staff_member.field_phone
+    - field.field.content_chunk.staff_member.field_photo
+    - image.style.thumbnail
+    - kind_wildcat.content_chunk_type.staff_member
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - telephone
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: content_chunk.staff_member.default
+targetEntityType: content_chunk
+bundle: staff_member
+mode: default
+content:
+  field_biography:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_job_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_photo:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

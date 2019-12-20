@@ -1,0 +1,15 @@
+uuid: ee2a7d10-2583-48ff-9b0a-46bd7e44b6b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      basic_elements: basic_elements
+id: header
+label: Heading
+icon_uuid: null
+description: 'H1 - H6 heading.'
+behavior_plugins: {  }

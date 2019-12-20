@@ -1,0 +1,22 @@
+uuid: 1771185c-7bb7-45e1-ac1f-35760a1571f1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - equity
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: equity_local_tasks
+theme: equity
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

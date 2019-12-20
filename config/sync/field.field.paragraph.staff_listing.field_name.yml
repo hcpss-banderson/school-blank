@@ -1,0 +1,21 @@
+uuid: 03c398fa-dbbf-40f7-8737-8cfa919326f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.staff_listing
+_core:
+  default_config_hash: MFK72XLQXD6C6-EO5xigYwVzM5ceW2335qrc09ooNSk
+id: paragraph.staff_listing.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: staff_listing
+label: Name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

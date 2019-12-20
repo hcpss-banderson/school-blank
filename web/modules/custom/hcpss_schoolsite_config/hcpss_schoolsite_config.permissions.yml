@@ -1,0 +1,4 @@
+configure hcpss schoolsite:
+  title: 'Change the schoolsite configuration'
+  description: ''
+  restrict access: true

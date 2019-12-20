@@ -1,0 +1,22 @@
+uuid: 27ca829c-d82b-4671-bca3-2e1c48beeb0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tweet
+label: Tweet
+type: 'canonical_entities:node'
+pattern: 'tweet/[node:field_tweet_id]'
+selection_criteria:
+  6c37fbb3-f4cf-4bb4-b6e0-89aac55f0e6a:
+    id: node_type
+    bundles:
+      tweet: tweet
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6c37fbb3-f4cf-4bb4-b6e0-89aac55f0e6a
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,20 @@
+uuid: dd272a33-9a26-48b6-a7c5-7023aec6cc33
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+    - paragraphs
+id: paragraph.field_members
+field_name: field_members
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: content_chunk
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

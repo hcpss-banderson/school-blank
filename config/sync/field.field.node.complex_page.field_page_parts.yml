@@ -1,0 +1,58 @@
+uuid: 51f62769-962c-496f-b950-7a18504f59a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_parts
+    - node.type.complex_page
+    - paragraphs.paragraphs_type.associated_staff
+  module:
+    - entity_reference_revisions
+id: node.complex_page.field_page_parts
+field_name: field_page_parts
+entity_type: node
+bundle: complex_page
+label: 'Page Parts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      associated_staff: associated_staff
+    target_bundles_drag_drop:
+      associated_staff:
+        enabled: true
+        weight: 11
+      content_highlight:
+        weight: 12
+        enabled: false
+      from_library:
+        enabled: true
+        weight: 13
+      header:
+        weight: 14
+        enabled: false
+      resource:
+        weight: 15
+        enabled: false
+      resource_list:
+        weight: 16
+        enabled: false
+      staff_listing:
+        weight: 17
+        enabled: false
+      staff_member:
+        weight: 18
+        enabled: false
+      student_group:
+        weight: 19
+        enabled: false
+      text:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

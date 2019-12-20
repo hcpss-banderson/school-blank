@@ -1,0 +1,20 @@
+uuid: 9e9dced2-3369-45a0-a6f6-ce45e0b4de50
+langcode: en
+status: true
+dependencies:
+  theme:
+    - equity
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: equity_local_actions
+theme: equity
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

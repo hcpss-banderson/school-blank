@@ -1,0 +1,21 @@
+id: d7_hcpss_schoolsite_config_settings
+label: HCPSS Schoolsite Config settings
+migration_tags:
+  - Drupal 7
+  - Configuration
+source:
+  plugin: variable
+  variables:
+    - hcpss_school_code
+    - hcpss_school_facebook_url
+    - hcpss_school_blog_url
+    - hcpss_school_analytics_id
+  source_module: hcpss_schoolsite_config
+process:
+  acronym: hcpss_school_code
+  facebook: hcpss_school_facebook_url
+  blog: hcpss_school_blog_url
+  google_analytics_code: hcpss_school_analytics_id
+destination:
+  plugin: config
+  config_name: hcpss_schoolsite_config.settings

@@ -1,0 +1,19 @@
+uuid: a0647d08-d3f5-46bc-b284-14c8b47fdb52
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+id: content_chunk.field_resources
+field_name: field_resources
+entity_type: content_chunk
+type: entity_reference
+settings:
+  target_type: content_chunk
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

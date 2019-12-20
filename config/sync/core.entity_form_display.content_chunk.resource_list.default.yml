@@ -1,0 +1,49 @@
+uuid: b2a54228-e8a4-4652-90f0-0f1d437657c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.resource
+    - field.field.content_chunk.resource_list.field_resources
+    - kind_wildcat.content_chunk_type.resource_list
+  module:
+    - entity_browser
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: content_chunk.resource_list.default
+targetEntityType: content_chunk
+bundle: resource_list
+mode: default
+content:
+  field_resources:
+    weight: 1
+    settings:
+      entity_browser: resource
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      table_settings:
+        label_column: true
+        status_column: false
+        bundle_column: false
+      field_widget_replace: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_table
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true

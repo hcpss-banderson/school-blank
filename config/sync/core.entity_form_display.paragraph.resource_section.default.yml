@@ -1,0 +1,40 @@
+uuid: 683758c8-ce6e-47e5-a841-4382335aad25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resource_section.field_resource_lists
+    - field.field.paragraph.resource_section.field_title
+    - paragraphs.paragraphs_type.resource_section
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: paragraph.resource_section.default
+targetEntityType: paragraph
+bundle: resource_section
+mode: default
+content:
+  field_resource_lists:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

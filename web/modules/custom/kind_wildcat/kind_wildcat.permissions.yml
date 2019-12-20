@@ -1,0 +1,53 @@
+add staff member entities:
+  title: 'Create new Staff member entities'
+
+administer staff member entities:
+  title: 'Administer Staff member entities'
+  description: 'Allow to access the administration form to configure Staff member entities.'
+  restrict access: true
+
+delete staff member entities:
+  title: 'Delete Staff member entities'
+
+edit staff member entities:
+  title: 'Edit Staff member entities'
+
+view published staff member entities:
+  title: 'View published Staff member entities'
+
+view unpublished staff member entities:
+  title: 'View unpublished Staff member entities'
+
+add content chunk entities:
+  title: 'Create new Content chunk entities'
+
+administer content chunk entities:
+  title: 'Administer Content chunk entities'
+  description: 'Allow to access the administration form to configure Content chunk entities.'
+  restrict access: true
+
+delete content chunk entities:
+  title: 'Delete Content chunk entities'
+
+edit content chunk entities:
+  title: 'Edit Content chunk entities'
+
+view published content chunk entities:
+  title: 'View published Content chunk entities'
+
+view unpublished content chunk entities:
+  title: 'View unpublished Content chunk entities'
+
+view all content chunk revisions:
+  title: 'View all Content chunk revisions'
+
+revert all content chunk revisions:
+  title: 'Revert all Content chunk revisions'
+  description: 'Role requires permission <em>view Content chunk revisions</em> and <em>edit rights</em> for content chunk entities in question or <em>administer content chunk entities</em>.'
+
+delete all content chunk revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Content chunk revisions</em> and <em>delete rights</em> for content chunk entities in question or <em>administer content chunk entities</em>.'
+
+permission_callbacks:
+  - \Drupal\kind_wildcat\ContentChunkPermissions::generatePermissions

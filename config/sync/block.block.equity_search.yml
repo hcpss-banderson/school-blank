@@ -1,0 +1,22 @@
+uuid: 155b70df-8094-4094-b081-2872150404cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - equity
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: equity_search
+theme: equity
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

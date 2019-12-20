@@ -1,0 +1,25 @@
+uuid: 99234d11-1dc8-47f0-ad43-2954f7e0fce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_website
+    - paragraphs.paragraphs_type.student_group
+  module:
+    - link
+_core:
+  default_config_hash: yXQA_kQIZUSkuDGZdFWSH1rABJskWmNKvYSHqJ4ULqM
+id: paragraph.student_group.field_website
+field_name: field_website
+entity_type: paragraph
+bundle: student_group
+label: 'Program Website'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

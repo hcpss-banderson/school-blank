@@ -1,0 +1,90 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\UrlHelper;
+
+/**
+ * Implementation of hook_preprocess_HOOK().
+ */
+function hcpss_schoolsite_config_preprocess_html(&$variables) {
+  $config = \Drupal::config('hcpss_schoolsite_config.settings');
+  $acronym = $config->get('acronym');
+  
+  $variables['attributes']['class'][] = $acronym;
+}
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function hcpss_schoolsite_config_form_system_site_information_settings_alter(
+  &$form, FormStateInterface $form_state, $form_id) {
+
+  $config = \Drupal::config('hcpss_schoolsite_config.settings');
+
+  $form['hcpss_schoolsite_config_settings'] = [
+    '#type' => 'details',
+    '#title' => 'Schoolsite configuration',
+    '#open' => true,
+  ];
+
+  $form['hcpss_schoolsite_config_settings']['hcpss_schoolsite_config_acronym'] = [
+    '#type' => 'textfield',
+    '#title' => 'School code',
+    '#default_value' => $config->get('acronym'),
+  ];
+
+  $form['hcpss_schoolsite_config_settings']['hcpss_schoolsite_config_facebook'] = [
+    '#type' => 'textfield',
+    '#title' => 'Facebook URL',
+    '#default_value' => $config->get('facebook'),
+  ];
+
+  $form['hcpss_schoolsite_config_settings']['hcpss_schoolsite_config_blog'] = [
+    '#type' => 'textfield',
+    '#title' => 'Blog URL',
+    '#default_value' => $config->get('blog'),
+  ];
+  
+  $form['hcpss_schoolsite_config_settings']['hcpss_schoolsite_config_google_analytics_code'] = [
+    '#type' => 'textfield',
+    '#title' => 'Google Analytics Code',
+    '#default_value' => $config->get('google_analytics_code'),
+  ];
+
+  $form['#validate'][] = 'hcpss_schoolsite_config_setting_validate';
+  $form['#submit'][] = 'hcpss_schoolsite_config_setting_submit';
+}
+
+/**
+ * Sumbission handler for system_site_information_settings.
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ */
+function hcpss_schoolsite_config_setting_submit(array &$form, FormStateInterface $form_state) {
+  \Drupal::configFactory()->getEditable('hcpss_schoolsite_config.settings')
+    ->set('acronym', $form_state->getValue('hcpss_schoolsite_config_acronym'))
+    ->set('facebook', $form_state->getValue('hcpss_schoolsite_config_facebook'))
+    ->set('blog', $form_state->getValue('hcpss_schoolsite_config_blog'))
+    ->set('google_analytics_code', $form_state->getValue('hcpss_schoolsite_config_google_analytics_code'))
+    ->save();
+}
+
+/**
+ * Validation callback for system_site_information_settings.
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ */
+function hcpss_schoolsite_config_setting_validate(array &$form, FormStateInterface $form_state) {
+  $facebook = $form_state->getValue('hcpss_schoolsite_config_facebook');
+  $blog     = $form_state->getValue('hcpss_schoolsite_config_blog');
+
+  if ($facebook && !UrlHelper::isValid($facebook, TRUE)) {
+    $form_state->setErrorByName('hcpss_schoolsite_config_facebook', 'Facebook URL must be a valid URL.');
+  }
+
+  if ($blog && !UrlHelper::isValid($blog, TRUE)) {
+    $form_state->setErrorByName('hcpss_schoolsite_config_blog', 'Blog URL must be a valid URL.');
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 68d4f24b-014c-48de-ae8d-fb1676591577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.entity_edit_lock_locked
+    - node.type.complex_page
+id: node.complex_page.entity_edit_lock_locked
+field_name: entity_edit_lock_locked
+entity_type: node
+bundle: complex_page
+label: 'Edit locked'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

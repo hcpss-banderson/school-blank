@@ -1,0 +1,23 @@
+uuid: cdbb9fd3-d54b-4f60-a2f1-d05991b60f8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_level
+    - paragraphs.paragraphs_type.header
+  module:
+    - options
+id: paragraph.header.field_level
+field_name: field_level
+entity_type: paragraph
+bundle: header
+label: Level
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

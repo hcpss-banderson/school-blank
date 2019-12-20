@@ -1,0 +1,17 @@
+{
+  "name": "drupal/kind_wildcat",
+  "description": "Site specific module.",
+  "type": "drupal-module",
+  "autoload": {
+    "psr-4": {
+      "Drupal\\kind_wildcat\\": "src/"
+    }
+  },
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9"
+      }
+    }
+  }
+}

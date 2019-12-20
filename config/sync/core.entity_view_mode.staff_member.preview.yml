@@ -1,0 +1,10 @@
+uuid: ca8d5385-d114-4349-8369-8d5d9acd5cf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+id: staff_member.preview
+label: Preview
+targetEntityType: staff_member
+cache: true

@@ -1,0 +1,19 @@
+uuid: 9f9f0642-d283-4e95-817a-c226d7ef91a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: PynyxAr7nHG2rOGxl21JVITPF-Z68Sh8BKn69nq8V_g
+name: News
+type: news
+description: 'Use <em>news</em> to post a news message to your community.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

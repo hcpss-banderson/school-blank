@@ -1,0 +1,36 @@
+uuid: dbfbc6a7-7876-4678-8350-9818d9ce94c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - node.type.event
+    - node.type.gallery
+    - node.type.news
+    - node.type.tweet
+    - paragraphs.paragraphs_type.content_highlight
+_core:
+  default_config_hash: mu4jnmWes1UzQQ2pdbVZ4kpncELQRf4th3NmLI7F9jg
+id: paragraph.content_highlight.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: content_highlight
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+      gallery: gallery
+      news: news
+      tweet: tweet
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: event
+field_type: entity_reference

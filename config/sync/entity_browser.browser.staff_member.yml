@@ -1,0 +1,47 @@
+uuid: 890f603f-b94f-4d44-a895-23b055a64978
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.staff_member_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: staff_member
+label: 'Staff Member'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select staff members'
+  auto_open: false
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: content_chunk
+  display: label
+  display_settings: {  }
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a5430e0e-a54d-4a91-894d-01e0faa0bd31:
+    settings:
+      view: staff_member_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select staff members'
+      auto_select: true
+    uuid: a5430e0e-a54d-4a91-894d-01e0faa0bd31
+    weight: 1
+    label: 'Find existing staff memebers'
+    id: view
+  43b752df-4d7f-496d-9531-77afcba9572e:
+    settings:
+      entity_type: content_chunk
+      bundle: staff_member
+      form_mode: abbreviated
+      submit_text: 'Save staff member'
+    uuid: 43b752df-4d7f-496d-9531-77afcba9572e
+    weight: 2
+    label: 'Create a new staff member'
+    id: entity_form

@@ -1,0 +1,30 @@
+uuid: d2ab002c-df08-4f28-829d-3855bda80ef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.associated_staff.field_role
+    - paragraphs.paragraphs_type.associated_staff
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: PO62yURd-EldbUbWrzgudT_9_h8eIKpQ8C0ZyGIgLXA
+id: paragraph.associated_staff.default
+targetEntityType: paragraph
+bundle: associated_staff
+mode: default
+content:
+  field_role:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

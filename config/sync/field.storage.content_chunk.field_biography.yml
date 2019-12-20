@@ -1,0 +1,19 @@
+uuid: 508ec368-68c7-43f0-b2f1-ade3f9bde3ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+    - text
+id: content_chunk.field_biography
+field_name: field_biography
+entity_type: content_chunk
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

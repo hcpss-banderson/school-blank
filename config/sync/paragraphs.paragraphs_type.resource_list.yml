@@ -1,0 +1,18 @@
+uuid: 35bf3c25-a65b-48c6-b5f0-f6a67f878fdd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      heres_another_para_cat: '0'
+      this_is_a_p_cat: '0'
+_core:
+  default_config_hash: wNQZKnWBD8q0S34MSEYajLngdnTqPunbvL4ML3OU21c
+id: resource_list
+label: 'Resource List'
+icon_uuid: 5bf26f29-2cf7-4e13-b7f2-a6ca682b074b
+description: 'A list of associated resource links.'
+behavior_plugins: {  }

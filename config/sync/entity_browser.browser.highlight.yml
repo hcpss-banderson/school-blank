@@ -1,0 +1,31 @@
+uuid: 7590cc28-bf32-4b0f-ae7f-2f4149f5de7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.highlight_filter
+  module:
+    - views
+name: highlight
+label: Highlight
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select highlights'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6c5926d4-eeea-445f-80ac-f33213b3c75c:
+    settings:
+      view: highlight_filter
+      view_display: entity_browser_1
+      submit_text: 'Select highlights'
+      auto_select: false
+    uuid: 6c5926d4-eeea-445f-80ac-f33213b3c75c
+    weight: 1
+    label: view
+    id: view

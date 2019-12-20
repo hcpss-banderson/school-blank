@@ -1,0 +1,42 @@
+uuid: 7e3d7230-32db-43fd-9235-9c2c53a6727e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resource_list_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: resource_list
+label: 'Resource List'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select resource list'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  c90b47c7-309e-4682-ad6a-8cfc1f8d2af5:
+    settings:
+      view: resource_list_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select resource lists'
+      auto_select: false
+    uuid: c90b47c7-309e-4682-ad6a-8cfc1f8d2af5
+    weight: 1
+    label: 'Existing resources lists'
+    id: view
+  ebdb0c91-1c81-411e-9cae-6c08bc8f59e7:
+    settings:
+      entity_type: content_chunk
+      bundle: resource_list
+      form_mode: abbreviated
+      submit_text: 'Save resource list'
+    uuid: ebdb0c91-1c81-411e-9cae-6c08bc8f59e7
+    weight: 2
+    label: 'New resource lists'
+    id: entity_form

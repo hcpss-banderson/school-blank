@@ -1,0 +1,20 @@
+entity.staff_member.add_form:
+  route_name: entity.staff_member.add_form
+  title: 'Add Staff member'
+  appears_on:
+    - entity.staff_member.collection
+entity.content_chunk.add_form:
+  route_name: entity.content_chunk.add_page
+  title: 'Add Content chunk'
+  appears_on:
+    - entity.content_chunk.collection
+entity.content_chunk_type.add_form:
+  route_name: entity.content_chunk_type.add_form
+  title: 'Add Content chunk type'
+  appears_on:
+    - entity.content_chunk_type.collection
+kind_wildcat.add_chunk:
+  route_name: entity.content_chunk.add_page
+  title: 'Add chunk'
+  appears_on:
+    - view.chunks.page_1

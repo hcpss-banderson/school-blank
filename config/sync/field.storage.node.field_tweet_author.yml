@@ -1,0 +1,21 @@
+uuid: c61e1bd2-8a9d-4186-b8ef-9d5ee3908e54
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: DroQEn03kyK_DpWv8ppe62X3NLiFtwe2clcCeevIQcQ
+id: node.field_tweet_author
+field_name: field_tweet_author
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: eb4f4f0d-8a51-4bf2-9ceb-776f576c2415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_chunk.field_email
+    - kind_wildcat.content_chunk_type.staff_member
+id: content_chunk.staff_member.field_email
+field_name: field_email
+entity_type: content_chunk
+bundle: staff_member
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

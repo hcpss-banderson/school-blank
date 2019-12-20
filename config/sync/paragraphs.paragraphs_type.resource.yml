@@ -1,0 +1,18 @@
+uuid: 9ea6a24a-c92d-4e3b-9463-26142ded36db
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      heres_another_para_cat: heres_another_para_cat
+      this_is_a_p_cat: '0'
+_core:
+  default_config_hash: 2gmxvSkZyVz9EykksIr6RhezarO3A0daDcX--2zC8q4
+id: resource
+label: Resource
+icon_uuid: 08595340-d04a-48d0-a2b2-8d9fb599f1b3
+description: 'A link to a resource.'
+behavior_plugins: {  }

@@ -1,0 +1,40 @@
+uuid: eba58f1e-7df1-489a-9664-50000b4c38ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resource_list.field_name
+    - field.field.paragraph.resource_list.field_resources
+    - paragraphs.paragraphs_type.resource_list
+  module:
+    - field_layout
+    - kind_wildcat
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: G7YpRm7jMCFhrdNpKTw7DD-vJqPQOdAbld3cUl-mzPk
+id: paragraph.resource_list.default
+targetEntityType: paragraph
+bundle: resource_list
+mode: default
+content:
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_resources:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: kind_wildcat_rich_link
+    region: content
+hidden:
+  created: true
+  status: true

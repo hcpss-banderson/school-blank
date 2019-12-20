@@ -1,0 +1,42 @@
+uuid: 6e7585a5-ac22-4bd0-87d3-310825634b2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resource_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: resource
+label: Resource
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  9d8ec456-be33-404d-96b8-e7ec81a3bcd8:
+    settings:
+      view: resource_entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select a resource'
+      auto_select: false
+    uuid: 9d8ec456-be33-404d-96b8-e7ec81a3bcd8
+    weight: 1
+    label: 'Select an existing resource'
+    id: view
+  82e2bd2f-151d-4622-80e2-cfa4a7ef0168:
+    settings:
+      entity_type: content_chunk
+      bundle: resource
+      form_mode: abbreviated
+      submit_text: 'Save resource'
+    uuid: 82e2bd2f-151d-4622-80e2-cfa4a7ef0168
+    weight: 2
+    label: 'Create a new resource'
+    id: entity_form

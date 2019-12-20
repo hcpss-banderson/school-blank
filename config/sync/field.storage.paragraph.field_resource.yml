@@ -1,0 +1,21 @@
+uuid: d786a4f7-2f59-498f-9eaf-235c4d3c8dca
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - kind_wildcat
+    - paragraphs
+id: paragraph.field_resource
+field_name: field_resource
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: content_chunk
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: 550ed1ed-353f-492d-bc8a-cf3dd11f618b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.content_chunk.resource_list.field_resources
+    - kind_wildcat.content_chunk_type.resource_list
+id: content_chunk.resource_list.default
+targetEntityType: content_chunk
+bundle: resource_list
+mode: default
+content:
+  field_resources:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  user_id: true

@@ -1,0 +1,34 @@
+uuid: 9dd9d73b-8c05-4ec4-9b63-ea2e83de6a95
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_images
+    - node.type.gallery
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: p08K4RXKlSvXOn16zNpYfgj968Ra49C9KodGlonyMEo
+id: node.gallery.teaser
+targetEntityType: node
+bundle: gallery
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_images: true

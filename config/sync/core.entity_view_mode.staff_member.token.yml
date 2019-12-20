@@ -1,0 +1,10 @@
+uuid: 4ddc01b0-f641-442f-b2c4-50aeb7529023
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+id: staff_member.token
+label: Token
+targetEntityType: staff_member
+cache: true

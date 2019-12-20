@@ -1,0 +1,32 @@
+uuid: c5978852-ac74-4858-95f6-0b3292bab48c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: MYBrdXikephqelJv53ZuMWA7wq4UbxwnsHS4EbFGODk
+id: paragraph.field_role
+field_name: field_role
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: coach
+      label: Coach
+    -
+      value: advisor
+      label: Advisor
+    -
+      value: sponsor
+      label: Sponsor
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

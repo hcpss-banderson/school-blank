@@ -1,0 +1,54 @@
+uuid: 6eda6432-62b2-4a00-94d5-2a70a3a18627
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_associated_staff
+    - paragraphs.paragraphs_type.associated_staff
+    - paragraphs.paragraphs_type.student_group
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: osTrXNncezaclkhBQu7HdxG9Rrb9wlI3vLLJUo3WyWQ
+id: paragraph.student_group.field_associated_staff
+field_name: field_associated_staff
+entity_type: paragraph
+bundle: student_group
+label: 'Associated Staff'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      associated_staff: associated_staff
+    target_bundles_drag_drop:
+      associated_staff:
+        enabled: true
+        weight: 9
+      content_highlight:
+        weight: 10
+        enabled: false
+      from_library:
+        weight: 11
+        enabled: false
+      gallery:
+        weight: 12
+        enabled: false
+      gallery_section:
+        weight: 13
+        enabled: false
+      links_list:
+        weight: 14
+        enabled: false
+      staff_member:
+        weight: 15
+        enabled: false
+      student_group:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

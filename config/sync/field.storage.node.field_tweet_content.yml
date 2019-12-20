@@ -1,0 +1,21 @@
+uuid: ff881aca-55b5-4343-9838-6db9b8b9027b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: UfkNMKuz7THGo2A8Kfd0OUwvrL-Jj3xEkBUEpW4BPIM
+id: node.field_tweet_content
+field_name: field_tweet_content
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

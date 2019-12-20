@@ -1,0 +1,19 @@
+uuid: 9cdd6c5a-01ec-4eb5-a168-4c6ba1afd61d
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+    - link
+id: content_chunk.field_url
+field_name: field_url
+entity_type: content_chunk
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

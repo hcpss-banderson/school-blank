@@ -1,0 +1,38 @@
+uuid: b0fa8343-c0c4-4e4e-8af2-c94cb75d6830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.content_chunk.field_photo
+    - kind_wildcat.content_chunk_type.staff_member
+  module:
+    - image
+id: content_chunk.staff_member.field_photo
+field_name: field_photo
+entity_type: content_chunk
+bundle: staff_member
+label: Photo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

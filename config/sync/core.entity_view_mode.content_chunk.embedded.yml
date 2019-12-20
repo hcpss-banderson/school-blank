@@ -1,0 +1,10 @@
+uuid: 5424102a-f2c8-4c17-ae83-4f6ba804efc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+id: content_chunk.embedded
+label: Embedded
+targetEntityType: content_chunk
+cache: true

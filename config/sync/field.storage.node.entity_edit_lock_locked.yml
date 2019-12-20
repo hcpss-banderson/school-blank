@@ -1,0 +1,18 @@
+uuid: 9728800b-5943-42f4-a40f-8a8974f8a6eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.entity_edit_lock_locked
+field_name: entity_edit_lock_locked
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: true
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

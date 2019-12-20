@@ -1,0 +1,51 @@
+uuid: 8cdcd83a-b77c-4dcd-998b-6b54fafecfbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_chunk.embedded
+    - field.field.content_chunk.resource.field_description
+    - field.field.content_chunk.resource.field_url
+    - kind_wildcat.content_chunk_type.resource
+  module:
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: content_chunk.resource.embedded
+targetEntityType: content_chunk
+bundle: resource
+mode: embedded
+content:
+  field_description:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  user_id: true

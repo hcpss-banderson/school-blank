@@ -1,0 +1,8 @@
+uuid: e162ffc6-1b05-4bd6-b204-180b2d605aa2
+langcode: en
+status: true
+dependencies: {  }
+id: basic_elements
+label: 'Basic Elements'
+description: 'Simple elements like text, headers, and images.'
+weight: -10

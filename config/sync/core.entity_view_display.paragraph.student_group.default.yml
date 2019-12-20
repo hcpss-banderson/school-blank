@@ -1,0 +1,58 @@
+uuid: a50d82b9-2f33-4a7a-96eb-a8f3b040473f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.student_group.field_associated_staff
+    - field.field.paragraph.student_group.field_description
+    - field.field.paragraph.student_group.field_name
+    - field.field.paragraph.student_group.field_website
+    - paragraphs.paragraphs_type.student_group
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+_core:
+  default_config_hash: TJeDKbQGR-dL1DeRdqSRyAqrfQlPkPjwIPhDoPGJkoc
+id: paragraph.student_group.default
+targetEntityType: paragraph
+bundle: student_group
+mode: default
+content:
+  field_associated_staff:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_website:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

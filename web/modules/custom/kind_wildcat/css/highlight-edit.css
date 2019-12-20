@@ -1,0 +1,5 @@
+.field--name-field-content .details-wrapper > .entities-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}

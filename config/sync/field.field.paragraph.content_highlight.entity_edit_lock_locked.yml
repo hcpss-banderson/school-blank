@@ -1,0 +1,21 @@
+uuid: 6b7ff905-7a4c-46c1-9e7a-197f7ee03663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.entity_edit_lock_locked
+    - paragraphs.paragraphs_type.content_highlight
+id: paragraph.content_highlight.entity_edit_lock_locked
+field_name: entity_edit_lock_locked
+entity_type: paragraph
+bundle: content_highlight
+label: 'Edit locked'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

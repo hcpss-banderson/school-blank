@@ -1,0 +1,6 @@
+name: HCPSS School Site Configuration
+description: Common configuration settings for HCPSS School Sites
+core: 8.x
+package: HCPSS
+type: module
+version: "8.x-1.0-alpha1"

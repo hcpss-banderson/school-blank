@@ -1,0 +1,9 @@
+hcpss_schoolsite_config.settings_form:
+  path: '/admin/config/hcpss_schoolsite_config/settings'
+  defaults:
+    _form: '\Drupal\hcpss_schoolsite_config\Form\SettingsForm'
+    _title: 'HCPSS Schoolsite Config'
+  requirements:
+    _permission: 'configure hcpss schoolsite'
+  options:
+    _admin_route: true

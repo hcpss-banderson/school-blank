@@ -1,0 +1,6 @@
+uuid: 33406ba5-1bb3-4bbf-b8b9-8fbf470f22a5
+langcode: en
+status: true
+dependencies: {  }
+id: staff_member
+label: 'Staff Member'

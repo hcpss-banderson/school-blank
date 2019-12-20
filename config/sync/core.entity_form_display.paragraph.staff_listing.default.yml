@@ -1,0 +1,82 @@
+uuid: 83fb8030-f75c-40de-ab38-82b97ad1baaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.staff_member
+    - field.field.paragraph.staff_listing.entity_edit_lock_locked
+    - field.field.paragraph.staff_listing.field_members
+    - field.field.paragraph.staff_listing.field_name
+    - field.field.paragraph.staff_listing.field_photo
+    - field.field.paragraph.staff_listing.field_website
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.staff_listing
+  module:
+    - entity_browser
+    - field_layout
+    - image
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+_core:
+  default_config_hash: o39bl4P3Nl_iX1ikc8PB09gLhl2GWKK6rZtT6RsJj40
+id: paragraph.staff_listing.default
+targetEntityType: paragraph
+bundle: staff_listing
+mode: default
+content:
+  entity_edit_lock_locked:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_members:
+    weight: 3
+    settings:
+      entity_browser: staff_member
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      table_settings:
+        status_column: true
+        bundle_column: true
+        label_column: true
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_table
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_photo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_website:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

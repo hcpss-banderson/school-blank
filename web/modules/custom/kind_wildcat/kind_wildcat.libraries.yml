@@ -1,0 +1,22 @@
+highlight.preview:
+  css:
+    theme:
+      css/highlight-preview.css: {}
+highlight.edit:
+  css:
+    theme:
+      css/highlight-edit.css: {}
+resource_section.preview:
+  css:
+    theme:
+      css/resource-section-preview.css: {}
+
+kind_wildcat_rich_link:
+  css:
+    component:
+      css/kind-wildcat-rich-link-widget.css: {}
+
+kind_wildcat_rich_link:
+  css:
+    component:
+      css/kind-wildcat-rich-link-widget.css: {}

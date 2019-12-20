@@ -1,0 +1,23 @@
+uuid: 2b6b8f84-406b-48ab-a2fb-1b80557b08c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_role
+    - paragraphs.paragraphs_type.associated_staff
+  module:
+    - options
+_core:
+  default_config_hash: qztjNMx1mzlHGs3PypvbHli2s8Wmw-iu1NZK0pLhubM
+id: paragraph.associated_staff.field_role
+field_name: field_role
+entity_type: paragraph
+bundle: associated_staff
+label: Role
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

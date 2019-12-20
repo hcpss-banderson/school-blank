@@ -1,0 +1,32 @@
+<?php
+
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+/**
+ * Implementation of hook_redirect_node_view().
+ */
+function tweet_redirect_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface && $node->bundle() == 'tweet') {
+    $url = vsprintf('https://twitter.com/%s/status/%s', [
+      str_replace('from:', '', $node->field_tweet_author->title),
+      $node->field_tweet_id->value,
+    ]);
+
+    $response = new RedirectResponse($url);
+    $response->send();
+    return;
+  }
+}
+
+/**
+ * Implementation of hook_ENTITY_TYPE_presave().
+ */
+function tweet_redirect_node_presave(EntityInterface $entity) {
+  if ($entity instanceof NodeInterface && $entity->bundle() == 'tweet') {
+
+  }
+}

@@ -1,0 +1,44 @@
+uuid: 94772a90-8700-4be7-9c70-1b7b3c1f2735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_highlight.field_content
+    - field.field.paragraph.content_highlight.field_title
+    - paragraphs.paragraphs_type.content_highlight
+  module:
+    - field_layout
+    - layout_builder
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: WWTuxb_0l-OqHjf76w2RSTtG1UUXyigBdy7h79uY-MA
+id: paragraph.content_highlight.default
+targetEntityType: paragraph
+bundle: content_highlight
+mode: default
+content:
+  field_content:
+    weight: 1
+    label: above
+    settings:
+      view_mode: highlight
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  entity_edit_lock_locked: true

@@ -1,0 +1,30 @@
+uuid: 7acaeb32-d7a1-404a-b901-665fd21782cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - node.type.news
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: ERGwm9SUpKvsYPjGODz_ydMPWLXL4xgacf-EvsNkGkQ
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

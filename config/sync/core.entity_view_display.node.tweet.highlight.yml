@@ -1,0 +1,94 @@
+uuid: c6a152a2-7f17-497b-9eeb-44e90f03f7b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.highlight
+    - field.field.node.tweet.field_tweet_author
+    - field.field.node.tweet.field_tweet_content
+    - field.field.node.tweet.field_tweet_external_image
+    - field.field.node.tweet.field_tweet_hashtags
+    - field.field.node.tweet.field_tweet_id
+    - field.field.node.tweet.field_tweet_local_image
+    - field.field.node.tweet.field_tweet_mentions
+    - node.type.tweet
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 50-50
+        components:
+          a9375e2a-c6a5-4855-93fa-78e77a6a98ec:
+            uuid: a9375e2a-c6a5-4855-93fa-78e77a6a98ec
+            region: second
+            configuration:
+              id: 'field_block:node:tweet:field_tweet_content'
+              label: 'Tweet Content'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_trimmed
+                settings:
+                  trim_length: 140
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          6403d158-ae6f-42df-897f-4f09214a325c:
+            uuid: 6403d158-ae6f-42df-897f-4f09214a325c
+            region: first
+            configuration:
+              id: 'field_block:node:tweet:field_tweet_local_image'
+              label: 'Tweet local image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: thumbnail
+                  image_link: content
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: n1naCLJ95e-a4yGDpEVSm6f2HbsP9a6tOXnU_NUyPhI
+id: node.tweet.highlight
+targetEntityType: node
+bundle: tweet
+mode: highlight
+content:
+  field_tweet_content:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_tweet_author: true
+  field_tweet_external_image: true
+  field_tweet_hashtags: true
+  field_tweet_id: true
+  field_tweet_local_image: true
+  field_tweet_mentions: true
+  links: true

@@ -1,0 +1,10 @@
+uuid: de432f59-6fc7-4ac5-a34d-33c6ea62d63f
+langcode: en
+status: true
+dependencies:
+  module:
+    - kind_wildcat
+id: content_chunk.abbreviated
+label: Abbreviated
+targetEntityType: content_chunk
+cache: true

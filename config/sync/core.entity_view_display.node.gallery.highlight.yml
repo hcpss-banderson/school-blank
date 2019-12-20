@@ -1,0 +1,45 @@
+uuid: a3ede849-61bc-4050-87df-de1579316a05
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.highlight
+    - field.field.node.gallery.body
+    - field.field.node.gallery.field_images
+    - image.style.medium
+    - node.type.gallery
+  module:
+    - kind_wildcat
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: M_r8UEzCtZEZVXAtEvTQ-ZWLOdvYdWSjtlwzoneMGyk
+id: node.gallery.highlight
+targetEntityType: node
+bundle: gallery
+mode: highlight
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 100
+    third_party_settings: {  }
+    region: content
+  field_images:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    type: key_image
+    region: content
+hidden:
+  links: true

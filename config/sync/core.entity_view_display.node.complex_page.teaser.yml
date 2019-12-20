@@ -1,0 +1,22 @@
+uuid: c6db6264-60ff-4612-9d47-8cb4ee83aaef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.complex_page
+  module:
+    - user
+id: node.complex_page.teaser
+targetEntityType: node
+bundle: complex_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_edit_lock_locked: true
+  field_page_parts: true

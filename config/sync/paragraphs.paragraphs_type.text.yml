@@ -1,0 +1,15 @@
+uuid: 1fa77a79-9abf-4e77-bf0f-948efb70c73d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      basic_elements: basic_elements
+id: text
+label: Text
+icon_uuid: null
+description: 'A block of text.'
+behavior_plugins: {  }

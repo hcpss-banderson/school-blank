@@ -1,0 +1,23 @@
+uuid: f239dd97-b8ff-42eb-a2f2-8f1e1d7af7b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.student_group
+  module:
+    - text
+_core:
+  default_config_hash: 8mvBRhJvdhHJ1JbXcNM1aW4VGnAxQF_cA6EYm1YglIA
+id: paragraph.student_group.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: student_group
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

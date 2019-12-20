@@ -1,0 +1,74 @@
+uuid: 65eed655-1965-4193-9539-03a374c99dca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.content_chunk.staff_member.field_biography
+    - field.field.content_chunk.staff_member.field_email
+    - field.field.content_chunk.staff_member.field_job_title
+    - field.field.content_chunk.staff_member.field_phone
+    - field.field.content_chunk.staff_member.field_photo
+    - kind_wildcat.content_chunk_type.staff_member
+  module:
+    - image
+    - text
+    - user
+id: content_chunk.staff_member.default
+targetEntityType: content_chunk
+bundle: staff_member
+mode: default
+content:
+  field_biography:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_job_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_photo:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
